@@ -1,9 +1,7 @@
 package com.maziifeanyichukwu.pocketmoney.models;
 
 import com.fasterxml.jackson.databind.DatabindException;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +15,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Wallet {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long walletId;
     private Double balance;
     @ManyToOne
