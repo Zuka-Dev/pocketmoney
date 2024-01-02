@@ -1,6 +1,7 @@
 package com.maziifeanyichukwu.pocketmoney.service.Impl;
 
 import com.maziifeanyichukwu.pocketmoney.models.User;
+<<<<<<< HEAD
 import com.maziifeanyichukwu.pocketmoney.models.ValidationToken;
 import com.maziifeanyichukwu.pocketmoney.repositories.TokenRepository;
 import com.maziifeanyichukwu.pocketmoney.repositories.UserRepository;
@@ -13,11 +14,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+=======
+import com.maziifeanyichukwu.pocketmoney.repositories.UserRepository;
+import com.maziifeanyichukwu.pocketmoney.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+>>>>>>> origin/master
 
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
+<<<<<<< HEAD
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -41,6 +52,8 @@ public class UserServiceImpl implements UserService {
     public void saveValidationToken(User user, String token) {
         ValidationToken validationToken = new ValidationToken(token, user);
         tokenRepository.save(validationToken);
+
+
 
     }
 
